@@ -79,6 +79,7 @@ Create a csv or xlsx file with your list of positions.
 *CSV example :*
 
 .. code-block::
+
     x,      y
     default,default
     10,     0
