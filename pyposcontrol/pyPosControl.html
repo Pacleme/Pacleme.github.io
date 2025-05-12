@@ -117,6 +117,16 @@
 <li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Commands.stopCmd"><code class="docutils literal notranslate"><span class="pre">Commands.stopCmd()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#python_files.communications.Test"><code class="docutils literal notranslate"><span class="pre">Test</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Test.__init__"><code class="docutils literal notranslate"><span class="pre">Test.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Test.commandsToString"><code class="docutils literal notranslate"><span class="pre">Test.commandsToString()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Test.goHome"><code class="docutils literal notranslate"><span class="pre">Test.goHome()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Test.moveCmd"><code class="docutils literal notranslate"><span class="pre">Test.moveCmd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Test.setHome"><code class="docutils literal notranslate"><span class="pre">Test.setHome()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python_files.communications.Test.stopCmd"><code class="docutils literal notranslate"><span class="pre">Test.stopCmd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python_files.communications.getCommandsClass"><code class="docutils literal notranslate"><span class="pre">getCommandsClass()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#python-files-connection">python_files.connection</a><ul>
@@ -134,6 +144,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html">applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">maintenance</a></li>
 </ul>
 
         </div>
@@ -166,14 +177,14 @@
 <span id="id1"></span><h2>python_files.models<a class="headerlink" href="#python-files-models" title="Link to this heading"></a></h2>
 <dl class="py class" id="module-python_files.models">
 <dt class="sig sig-object py" id="python_files.models.ModelControl">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.models.</span></span><span class="sig-name descname"><span class="pre">ModelControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">communication</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#python_files.communications.Commands" title="python_files.communications.Commands"><span class="pre">Commands</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#python_files.models.ModelSettings" title="python_files.models.ModelSettings"><span class="pre">ModelSettings</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelControl" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.models.</span></span><span class="sig-name descname"><span class="pre">ModelControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#python_files.models.ModelSettings" title="python_files.models.ModelSettings"><span class="pre">ModelSettings</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelControl" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Core class of this project.</p>
 <p>Launch commands, save current position, read settings from python_files.models.ModelSettings and save concrete settings.
 Every actions is managed by this class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.models.ModelControl.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">communication</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#python_files.communications.Commands" title="python_files.communications.Commands"><span class="pre">Commands</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#python_files.models.ModelSettings" title="python_files.models.ModelSettings"><span class="pre">ModelSettings</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelControl.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#python_files.models.ModelSettings" title="python_files.models.ModelSettings"><span class="pre">ModelSettings</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelControl.__init__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -450,12 +461,12 @@ Speed of the movement is either mid value between max and min, or max/2 if no mi
 
 <dl class="py class">
 <dt class="sig sig-object py" id="python_files.models.ModelSettings">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.models.</span></span><span class="sig-name descname"><span class="pre">ModelSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelSettings" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.models.</span></span><span class="sig-name descname"><span class="pre">ModelSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_ack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelSettings" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Load, store and update settings to send the signal.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.models.ModelSettings.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelSettings.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_ack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelSettings.__init__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>axis_names</strong> (<em>tuple</em><em>, </em><em>list</em>) – list of axis names, up to 3 axis implemented</p>
@@ -471,7 +482,7 @@ Speed of the movement is either mid value between max and min, or max/2 if no mi
 
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.models.ModelSettings.applySettings">
-<span class="sig-name descname"><span class="pre">applySettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepscales</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_limits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelSettings.applySettings" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">applySettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepscales</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_limits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">communication</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.models.ModelSettings.applySettings" title="Link to this definition"></a></dt>
 <dd><p>Apply concrete settings from parameters to model properties</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -479,7 +490,8 @@ Speed of the movement is either mid value between max and min, or max/2 if no mi
 <li><p><strong>port</strong> (<em>str</em>) – <em>(Optional)</em> computer port to communicate with the controller. <em>ex: `’COM3’`</em></p></li>
 <li><p><strong>stepscales</strong> (<em>dict</em><em>[</em><em>str:int</em><em>]</em>) – <em>(Optional)</em> stepscale of platines in <cite>step/mm</cite> unit by axis as key used to convert input to command. <em>ex: `{ ‘x’:500 }`</em></p></li>
 <li><p><strong>speed_limits</strong> (<em>dict</em><em>[</em><em>str:int</em><em>]</em>) – <em>(Optional)</em> speed limits in <cite>mm/s</cite> unit by axis as key used to secure speed in commands. <em>ex: `{ ‘x’:50 }`</em></p></li>
-<li><p><strong>baudrate</strong> – <em>(Optional)</em> baudrate in <cite>baud/s</cite> unit to communicate with the controller.</p></li>
+<li><p><strong>baudrate</strong> (<em>int</em>) – <em>(Optional)</em> baudrate in <cite>baud/s</cite> unit to communicate with the controller.</p></li>
+<li><p><strong>communication</strong> (<em>str</em>) – <em>(Optional)</em> language of commands to communicate with the controller.</p></li>
 </ul>
 </dd>
 </dl>
@@ -867,7 +879,7 @@ Currently stopCmd and moveCmd are the mandatory methods.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.communications.Commands.moveCmd">
-<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moveCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#python_files.communications.Commands.moveCmd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moveCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_speeds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#python_files.communications.Commands.moveCmd" title="Link to this definition"></a></dt>
 <dd><p>Returns a list of commands to make a move.</p>
 </dd></dl>
 
@@ -885,6 +897,56 @@ Currently stopCmd and moveCmd are the mandatory methods.</p>
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="python_files.communications.Test">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.communications.</span></span><span class="sig-name descname"><span class="pre">Test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_speeds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.communications.Test" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#python_files.communications.Commands" title="python_files.communications.Commands"><code class="xref py py-class docutils literal notranslate"><span class="pre">Commands</span></code></a></p>
+<dl class="simple">
+<dt>Summary:</dt><dd><p>Test commands that return “bonjour” commands.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="python_files.communications.Test.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_speeds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.communications.Test.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="python_files.communications.Test.commandsToString">
+<span class="sig-name descname"><span class="pre">commandsToString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#python_files.communications.Test.commandsToString" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of commands in string type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="python_files.communications.Test.goHome">
+<span class="sig-name descname"><span class="pre">goHome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#python_files.communications.Test.goHome" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of commands to go home</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="python_files.communications.Test.moveCmd">
+<span class="sig-name descname"><span class="pre">moveCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_speeds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#python_files.communications.Test.moveCmd" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of commands to make a move.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="python_files.communications.Test.setHome">
+<span class="sig-name descname"><span class="pre">setHome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbAxis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#python_files.communications.Test.setHome" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of commands to set current position as home</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="python_files.communications.Test.stopCmd">
+<span class="sig-name descname"><span class="pre">stopCmd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#python_files.communications.Test.stopCmd" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of commands to make a stop.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="python_files.communications.getCommandsClass">
+<span class="sig-prename descclassname"><span class="pre">python_files.communications.</span></span><span class="sig-name descname"><span class="pre">getCommandsClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communication</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#python_files.communications.Commands" title="python_files.communications.Commands"><span class="pre">Commands</span></a></span></span><a class="headerlink" href="#python_files.communications.getCommandsClass" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 <section id="python-files-connection">
 <span id="id8"></span><h2>python_files.connection<a class="headerlink" href="#python-files-connection" title="Link to this heading"></a></h2>
@@ -892,15 +954,15 @@ Currently stopCmd and moveCmd are the mandatory methods.</p>
 <dt class="sig sig-object py" id="python_files.connection.MissingValue">
 <em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.connection.</span></span><span class="sig-name descname"><span class="pre">MissingValue</span></span><a class="headerlink" href="#python_files.connection.MissingValue" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Meant to be raise when a value like a setting is not set.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="python_files.connection.SerialConnection">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.connection.</span></span><span class="sig-name descname"><span class="pre">SerialConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytesize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">python_files.connection.</span></span><span class="sig-name descname"><span class="pre">SerialConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytesize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Serial</span></code></p>
+<p>Manage a serial connection to send commands.</p>
 <dl class="simple">
-<dt>Summary:</dt><dd><p>Manage a serial connection to send commands.</p>
-</dd>
 <dt>Attributes:</dt><dd><ul class="simple">
 <li><p>port: str, port name of the connection.</p></li>
 <li><p>baudrate: int, information signal speed, unit is baud/s.</p></li>
@@ -912,16 +974,22 @@ Currently stopCmd and moveCmd are the mandatory methods.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.connection.SerialConnection.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytesize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection.__init__" title="Link to this definition"></a></dt>
-<dd><p>Initialize comm port object. If a “port” is given, then the port will be
-opened immediately. Otherwise a Serial port object in closed state
-is returned.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytesize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_ack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> (<em>float</em><em> | </em><em>int</em>) – max waiting time when reading before aborting</p></li>
+<li><p><strong>bytesize</strong> (<em>int</em>) – bytesize of the serial connection</p></li>
+<li><p><strong>wait_ack</strong> (<em>bool</em>) – <em>(Optional)</em> Wait for an acknowledge message after sending each command.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.connection.SerialConnection.available_serial_ports">
 <span class="sig-name descname"><span class="pre">available_serial_ports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection.available_serial_ports" title="Link to this definition"></a></dt>
-<dd><p>Lists serial port names</p>
+<dd><p>Read the available serial ports names</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>EnvironmentError</strong> – On unsupported or unknown platforms</p>
@@ -929,31 +997,38 @@ is returned.</p>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A list of the serial ports available on the system</p>
 </dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.connection.SerialConnection.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection.close" title="Link to this definition"></a></dt>
-<dd><p>Close port</p>
+<dd><p>Close the current serial link if it is open.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="python_files.connection.SerialConnection.executeCmd">
 <span class="sig-name descname"><span class="pre">executeCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection.executeCmd" title="Link to this definition"></a></dt>
 <dd><p>Execute a single command or a list of commands.
-Params:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>commands: str,byte,list of str or list of bytes - commands to be executed, byte format should be ascii.</p></li>
-<li><p>port (Optional) : port to send to commands to.</p></li>
+Open a serial link and close it afterwards.</p>
+<p>Return options :
+- 0 if no acknowledge is recieved, all commands might not have been sent.
+- 1 if all commands were sent and all acknowledge revieved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>commands</strong> (<em>str</em><em> | </em><em>byte</em><em> | </em><em>list</em><em>[</em><em>str</em><em>|</em><em>byte</em><em>]</em>) – commands to be executed, byte format should be ascii.</p></li>
+<li><p><strong>port</strong> (<em>str</em>) – <em>(Optional)</em> port to send commands to.</p></li>
 </ul>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns: </dt><dd><ul class="simple">
-<li><p>0 if no acknowledge is recieved, all commands might not have been sent.</p></li>
-<li><p>1 if all commands were sent and all acknowledges recieved.</p></li>
-</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>success state of the transmission.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -962,18 +1037,22 @@ Params:</p>
 <dt class="sig sig-object py" id="python_files.connection.SerialConnection.executeSelfCmd">
 <span class="sig-name descname"><span class="pre">executeSelfCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#python_files.connection.SerialConnection.executeSelfCmd" title="Link to this definition"></a></dt>
 <dd><p>Execute a single command or a list of commands.
-Params:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>commands: str,byte,list of str or list of bytes - commands to be executed, byte format should be ascii.</p></li>
-<li><p>port (Optional) : port to send to commands to.</p></li>
+Open the serial link if necessary but let it open afterwards.</p>
+<p>Return options :
+- 0 if no acknowledge is recieved, all commands might not have been sent.
+- 1 if all commands were sent and all acknowledge revieved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>commands</strong> (<em>str</em><em> | </em><em>byte</em><em> | </em><em>list</em><em>[</em><em>str</em><em>|</em><em>byte</em><em>]</em>) – commands to be executed, byte format should be ascii.</p></li>
+<li><p><strong>port</strong> (<em>str</em>) – <em>(Optional)</em> port to send commands to.</p></li>
 </ul>
-</div></blockquote>
-<dl class="simple">
-<dt>Returns: </dt><dd><ul class="simple">
-<li><p>0 if no acknowledge is recieved, all commands might not have been sent.</p></li>
-<li><p>1 if all commands were sent and all acknowledges recieved.</p></li>
-</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>success state of the transmission.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
